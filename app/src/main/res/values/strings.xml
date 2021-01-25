@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Portfolio</string>
+    <string name="aboutmetxt">Hello! My name is Piotr Majchrowski and I study Applied Computer Science. I\'m on my master studies.</string>
+    <string name="hobbytxt">I enjoy playing guitars of any kind - classic, acoustic, bass, electric. I like listening to music then playing it I think this is very nice.</string>
+</resources>

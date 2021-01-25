@@ -19,6 +19,18 @@
         app:srcCompat="@drawable/aboutmeimg" />
 
     <TextView
+        android:id="@+id/tv_aboutTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="About me"
+        android:textColor="@color/black"
+        android:textSize="64sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_aboutme"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
         android:id="@+id/tv_aboutme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

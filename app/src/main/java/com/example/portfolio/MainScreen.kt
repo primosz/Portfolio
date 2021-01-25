@@ -26,6 +26,17 @@ class MainScreen : AppCompatActivity() {
 
 
 
+        btn_photos.setOnTouchListener(object : View.OnTouchListener {
+            override fun onTouch(v: View?, event: MotionEvent?): Boolean {
+                btn_photos.isEnabled = false
+                val intent = Intent(this@MainScreen, Photos::class.java)
+                startActivity(intent)
+                overridePendingTransition(R.anim.slide_in_left,
+                        R.anim.slide_out_right);
+
+                return true
+            }
+        })
 
         btn_aboutme.setOnTouchListener(object : View.OnTouchListener {
             override fun onTouch(v: View?, event: MotionEvent?): Boolean {
@@ -50,9 +61,19 @@ class MainScreen : AppCompatActivity() {
                 return true
             }
         })
+
+        btn_fav.setOnTouchListener(object : View.OnTouchListener {
+            override fun onTouch(v: View?, event: MotionEvent?): Boolean {
+                btn_fav.isEnabled = false
+                val intent = Intent(this@MainScreen, Fav::class.java)
+                startActivity(intent)
+                overridePendingTransition(R.anim.slide_in_right,
+                        R.anim.slide_out_left);
+
+                return true
+            }
+        })
     }
-
-
 
     override fun onResume() {
         super.onResume()
@@ -60,5 +81,9 @@ class MainScreen : AppCompatActivity() {
         btn_aboutme.isEnabled = true
         val btn_hobby = findViewById<Button>(R.id.btn_hobby)
         btn_hobby.isEnabled = true
+        val btn_fav = findViewById<Button>(R.id.btn_fav)
+        btn_fav.isEnabled = true
+        val btn_photos = findViewById<Button>(R.id.btn_photos)
+        btn_photos.isEnabled = true
     }
 }

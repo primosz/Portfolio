@@ -34,13 +34,10 @@ class MainActivity : AppCompatActivity() {
         windowManager.defaultDisplay.getMetrics(metrics)
         val params = videoView.layoutParams as LinearLayout.LayoutParams
         params.width = metrics.widthPixels
-      //  params.height = metrics.heightPixels
-       // params.leftMargin = 0
         videoView.layoutParams = params
                 //specify the location of media file
         val uri: Uri = parse("android.resource://" + getPackageName() + "/" + R.raw.animation2)
-        //Setting MediaController and URI, then starting the videoView
-                videoView.setVideoURI(uri)
+        videoView.setVideoURI(uri)
         videoView.requestFocus()
         videoView.start()
         Handler().postDelayed({
